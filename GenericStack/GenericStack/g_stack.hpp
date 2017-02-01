@@ -24,7 +24,7 @@ g_stack<T>::~g_stack()
 }
 
 template<typename T>
-size_t g_stack<T>::num_instances()
+inline const size_t g_stack<T>::GetInstancesQty()
 {
 	return g_stack<T>::instances;
 }

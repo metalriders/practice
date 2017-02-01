@@ -11,7 +11,7 @@ public:
 	g_stack(const g_stack<T>&);
 	~g_stack();
 
-	size_t num_instances();
+	static const size_t g_stack<T>::GetInstancesQty();
 };
 
 #include "g_stack.hpp"
