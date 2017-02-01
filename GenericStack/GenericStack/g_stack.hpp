@@ -4,15 +4,18 @@
 #define _G_STACK_HPP_
 
 template<typename T>
+size_t g_stack<T>::instances = 0;
+
+template<typename T>
 g_stack<T>::g_stack()
 {
-	instances = 0;
+	++g_stack<T>::instances;
 }
 
 template<typename T>
 g_stack<T>::g_stack(const g_stack<T> &other)
 {
-	instances = other.num_instances();
+	++g_stack<T>::instances;
 }
 
 template <typename T>
@@ -23,7 +26,7 @@ g_stack<T>::~g_stack()
 template<typename T>
 size_t g_stack<T>::num_instances()
 {
-	return instances;
+	return g_stack<T>::instances;
 }
 
 #endif // !_G_STACK_HPP_

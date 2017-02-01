@@ -5,7 +5,7 @@ template<typename T>
 class g_stack
 {
 private:
-	size_t instances;
+	static size_t instances;
 public:
 	g_stack();
 	g_stack(const g_stack<T>&);
