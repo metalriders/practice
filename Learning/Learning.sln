@@ -7,6 +7,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Generic Stack", "Generic St
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TypeId usage", "TypeId usage\TypeId usage.vcxproj", "{2949B839-1D6C-438F-9C21-07C8295EF5DB}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Strings Rearrangement", "Strings Rearrangement\Strings Rearrangement.vcxproj", "{86DBD9B2-7DE0-4087-A167-F51E4AB2F58E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -31,6 +33,14 @@ Global
 		{2949B839-1D6C-438F-9C21-07C8295EF5DB}.Release|x64.Build.0 = Release|x64
 		{2949B839-1D6C-438F-9C21-07C8295EF5DB}.Release|x86.ActiveCfg = Release|Win32
 		{2949B839-1D6C-438F-9C21-07C8295EF5DB}.Release|x86.Build.0 = Release|Win32
+		{86DBD9B2-7DE0-4087-A167-F51E4AB2F58E}.Debug|x64.ActiveCfg = Debug|x64
+		{86DBD9B2-7DE0-4087-A167-F51E4AB2F58E}.Debug|x64.Build.0 = Debug|x64
+		{86DBD9B2-7DE0-4087-A167-F51E4AB2F58E}.Debug|x86.ActiveCfg = Debug|Win32
+		{86DBD9B2-7DE0-4087-A167-F51E4AB2F58E}.Debug|x86.Build.0 = Debug|Win32
+		{86DBD9B2-7DE0-4087-A167-F51E4AB2F58E}.Release|x64.ActiveCfg = Release|x64
+		{86DBD9B2-7DE0-4087-A167-F51E4AB2F58E}.Release|x64.Build.0 = Release|x64
+		{86DBD9B2-7DE0-4087-A167-F51E4AB2F58E}.Release|x86.ActiveCfg = Release|Win32
+		{86DBD9B2-7DE0-4087-A167-F51E4AB2F58E}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
