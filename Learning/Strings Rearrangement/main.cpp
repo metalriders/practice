@@ -2,6 +2,8 @@
 #include <vector>
 #include <iostream>
 
+typedef std::vector<std::string> Vector_str;
+
 bool diff_one_char(std::string lhs, std::string rhs)
 {
 	int diff_chars = -1;
@@ -14,9 +16,9 @@ bool diff_one_char(std::string lhs, std::string rhs)
 	return !diff_chars;
 }
 
-bool stringsRearrangement(std::vector<std::string> inputArray) {
-	std::vector<std::string> output;
+bool stringsRearrangement(Vector_str inputArray) {
 	bool insert_made;
+	Vector_str output;
 
 	while (!inputArray.empty())
 	{
@@ -27,38 +29,38 @@ bool stringsRearrangement(std::vector<std::string> inputArray) {
 			continue;
 		}
 
-		for (std::vector<std::string>::iterator it_in = inputArray.begin(); it_in != inputArray.end(); )
+		for (Vector_str::iterator it_in = inputArray.begin(); it_in != inputArray.end(); )
 		{
 			insert_made = false;
-			for (auto it_out = output.rbegin(); it_out != output.rend(); it_out++)
+			for (auto it_out = output.begin(); it_out != output.end(); it_out++)
 			{
 
 				if (diff_one_char(*it_in, *it_out))
 				{
-					// if fits at end
-					if (it_out == output.rbegin())
+					// if fits at begining
+					if (it_out == output.begin())
 					{
-						output.push_back(*it_in);
+						it_out = output.insert(output.begin(), *it_in);
 						insert_made = true;
 					}
 
-					// if fits at the begining
-					else if (it_out == output.rend())
+					// if fits at the end
+					else if (it_out + 1 == output.end())
 					{
-						output.insert(output.begin(), *it_in);
+						it_out = output.insert(output.end(), *it_in);
 						insert_made = true;
 					}
 
 					// if fits before
 					else if (diff_one_char(*it_in, *(it_out - 1)))
 					{
-						output.insert(it_out.base() - 2, *it_in);
+						it_out = output.insert(it_out - 1, *it_in);
 						insert_made = true;
 					}
 					// if fits after
 					else if (diff_one_char(*it_in, *(it_out + 1)))
 					{
-						output.insert(it_out.base() + 2, *it_in);
+						it_out = output.insert(it_out + 1, *it_in);
 						insert_made = true;
 					}
 					else
@@ -79,9 +81,10 @@ bool stringsRearrangement(std::vector<std::string> inputArray) {
 }
 
 
+
 int main()
 {
-	std::vector<std::string> in{ "abc","xbc","xxc","xbc","aby","ayy","aby" };
+	Vector_str in{ "abc","xbc","xxc","xbc","aby","ayy","aby" };
 
 	std::cout << stringsRearrangement(in);
 
