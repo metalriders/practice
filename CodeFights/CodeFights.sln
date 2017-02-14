@@ -1,11 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.23107.0
+VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Strings Rearrangement", "Strings Rearrangement\Strings Rearrangement.vcxproj", "{3824BD50-D214-4B9F-909D-4B978F1E54A7}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Sum In Perimeter", "Sum In Perimeter\Sum In Perimeter.vcxproj", "{72E42896-840F-4085-BE69-AB106CBA6CE6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Arcade", "Arcade", "{3CB7C81C-F0E5-4ECC-B4EC-26A5AC16A91A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
