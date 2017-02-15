@@ -26,13 +26,13 @@ bool plagiarismCheck(v_str code1, v_str code2)
 {
 	std::string cod1, cod2;
 	bool word_rec = false;
-	for (auto line : code1) cod1 += line + b_line;
-	for (auto line : code2) cod2 += line + b_line;
+	for (auto line : code1) cod1 += line + spc;
+	for (auto line : code2) cod2 += line + spc;
 	
-	// Special case :P (not likely to happen)
+	// Special case :P (not likely to happen) ???
 	//if (cod1.compare(cod2)) return true;
 	
-	//remove all spaces 
+	//remove all spaces ???
 
 	std::cout << cod1 << std::endl;
 	std::cout << cod2 << std::endl;
@@ -57,51 +57,40 @@ bool plagiarismCheck(v_str code1, v_str code2)
 		}
 		else if(!c_word.empty())
 		{
-			size_t idx = cod2.find(p_code, 0) + p_code.size();		//get idx for begin of word to find
+			size_t idx = cod2.find(p_code, 0) + p_code.size() - 1;		//get idx for begin of word to find
 
-			if (c_word.compare(cod2.substr(idx, c_word.size()))) continue;
-
-			std::string check_word = "" ;
-			// find
-			while (sp_chr.find_first_of(cod2[idx]) == _STR::npos)
+			if (!c_word.compare(cod2.substr(idx, c_word.size())))
 			{
-				check_word += cod2[idx];
-				idx++;
-			}
+				std::string check_word = "";
+				// find
+				while (sp_chr.find_first_of(cod2[idx]) == _STR::npos)
+				{
+					check_word += cod2[idx];
+					idx++;
+				}
 
-			// replace
-			while (idx < cod2.size()) 
-			{
-				//cod2.replace()
-				idx++;
+				// replace
+				while (idx < cod2.size())
+				{
+					cod2.replace(idx, check_word.size(), c_word, 0, c_word.size());
+					idx++;
+				}
 			}
+			p_code = c_word;
+			c_word.clear();
+			word_rec = false;
 		}
 
 		//if we are not tracking a word just get a trail of previous code
 		p_code += cod1[i];
 	}
 
-	return false;
+	return true;
 }
 
 void main()
 {
 	std::vector<std::string> code1, code2;
-
-	std::string base = "this is a test string.";
-	std::string str2 = "sample phrase";
-	std::string str3 = "sample phrase";
-	std::string str4 = "useful.";
-
-	// replace signatures used in the same order as described above:
-
-	// Using positions:                     0123456789*123456789*12345
-	std::string str = base;				// "this is a test string."
-	str.replace(8, str2.size(), str2, 0, str2.size());			// "this is an example string." (1)
-	str.replace(19, str3.size(), str3, 6, 6);     // "this is an example phrase." (2)
-	str.replace(8, 10, "just a");		// "this is just a phrase."     (3)
-	str.replace(8, 6, "a shorty", 7);	// "this is a short phrase."    (4)
-	str.replace(22, 1, 3, '!');			// "this is a short phrase!!!"  (5)
 
 	code1 = { "if (2 * 2 == 5 &&",
 			"true):",
