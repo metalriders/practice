@@ -3,6 +3,7 @@
 #include <string>
 #include <algorithm>
 #include <map>
+//#include "..\"
 
 #define _STD ::std::
 #define _STR _STD string 
@@ -14,7 +15,7 @@ typedef _STD map<_str, _str> m_str_str;
 
 const char spc = ' ';
 const char b_line = '\\';
-const _str sp_chr = " ,:;[](){}\"'*-+=";
+const _str sp_chr = " ,:;[](){}\"'*-+";
 
 const v_str kwords
 { 
@@ -51,32 +52,35 @@ bool plagiarismCheck(v_str code1, v_str code2)
 		}
 		else if(!c_word.empty() && _STD find(kwords.begin(), kwords.end(),c_word) != kwords.end()) // word found but is a keyword
 		{
-			p_code = c_word;
+			p_code += c_word;
 			c_word.clear();
 			word_rec = false;
 		}
 		else if(!c_word.empty())
 		{
-			size_t idx = cod2.find(p_code, 0) + p_code.size() - 1;		//get idx for begin of word to find
+			size_t idx = cod2.find(p_code, 0) + p_code.size();		//get idx for begin of word to find
 
-			if (!c_word.compare(cod2.substr(idx, c_word.size())))
+			if (c_word.compare(cod2.substr(idx, c_word.size())) != 0)
 			{
 				std::string check_word = "";
-				// find
-				while (sp_chr.find_first_of(cod2[idx]) == _STR::npos)
+				int s_idx = idx;
+				
+				// get word changed
+				while (sp_chr.find_first_of(cod2[s_idx]) == _STR::npos)
 				{
-					check_word += cod2[idx];
-					idx++;
+					check_word += cod2[s_idx];
+					s_idx++;
 				}
 
-				// replace
+				// find & replace
 				while (idx < cod2.size())
 				{
+					idx = cod2.find(check_word, 0);
+					if (idx == _STR::npos) break;
 					cod2.replace(idx, check_word.size(), c_word, 0, c_word.size());
-					idx++;
 				}
 			}
-			p_code = c_word;
+			p_code += c_word;
 			c_word.clear();
 			word_rec = false;
 		}
@@ -85,13 +89,32 @@ bool plagiarismCheck(v_str code1, v_str code2)
 		p_code += cod1[i];
 	}
 
-	return true;
+	// compare the two codes
+
+	return cod1.compare(cod2)==0;
 }
 
 void main()
 {
 	std::vector<std::string> code1, code2;
 
+	// Test 1
+	code1 = {	"def is_even_sum(a, b):",
+				"    return (a + b) % 2 == 0" };
+	code2 = {	"def is_even_sum(summand_1, summand_2):",
+				"    return (summand_1 + summand_2) % 2 == 0" };
+	//plagiarismCheck(code1, code2);
+
+	// Test 2
+	code1 = {	"function is_even_sum(a, b) {",
+				"  return (a + b) % 2 === 0;",
+				"}" };
+	code2 = {	"function is_even_sum(a, b) {",
+				"  return (a + b) % 2 !== 1;",
+				"}" };
+	plagiarismCheck(code1, code2);
+
+	// Test 
 	code1 = { "if (2 * 2 == 5 &&",
 			"true):",
 			"  print 'Tricky test ;)'" };
