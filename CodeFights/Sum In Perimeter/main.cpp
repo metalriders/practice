@@ -72,8 +72,9 @@ int reverseCoord(int direction)
 	default:
 		break;
 	}
-
+	return undef;
 }
+
 void updateCoords(int direction, pair_int_int &coords)
 {
 	switch (direction)
