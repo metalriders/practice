@@ -7,6 +7,10 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Strings Rearrangement", "St
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Sum In Perimeter", "Sum In Perimeter\Sum In Perimeter.vcxproj", "{72E42896-840F-4085-BE69-AB106CBA6CE6}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Round 2 CF bot", "Round 2 CF bot\Round 2 CF bot.vcxproj", "{97578547-CC89-4E7C-ADC9-D58F62520512}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "round 3 CF bot", "round 3 CF bot\round 3 CF bot.vcxproj", "{9CD8D293-016D-4E7C-841C-DB74C659C942}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -31,6 +35,22 @@ Global
 		{72E42896-840F-4085-BE69-AB106CBA6CE6}.Release|x64.Build.0 = Release|x64
 		{72E42896-840F-4085-BE69-AB106CBA6CE6}.Release|x86.ActiveCfg = Release|Win32
 		{72E42896-840F-4085-BE69-AB106CBA6CE6}.Release|x86.Build.0 = Release|Win32
+		{97578547-CC89-4E7C-ADC9-D58F62520512}.Debug|x64.ActiveCfg = Debug|x64
+		{97578547-CC89-4E7C-ADC9-D58F62520512}.Debug|x64.Build.0 = Debug|x64
+		{97578547-CC89-4E7C-ADC9-D58F62520512}.Debug|x86.ActiveCfg = Debug|Win32
+		{97578547-CC89-4E7C-ADC9-D58F62520512}.Debug|x86.Build.0 = Debug|Win32
+		{97578547-CC89-4E7C-ADC9-D58F62520512}.Release|x64.ActiveCfg = Release|x64
+		{97578547-CC89-4E7C-ADC9-D58F62520512}.Release|x64.Build.0 = Release|x64
+		{97578547-CC89-4E7C-ADC9-D58F62520512}.Release|x86.ActiveCfg = Release|Win32
+		{97578547-CC89-4E7C-ADC9-D58F62520512}.Release|x86.Build.0 = Release|Win32
+		{9CD8D293-016D-4E7C-841C-DB74C659C942}.Debug|x64.ActiveCfg = Debug|x64
+		{9CD8D293-016D-4E7C-841C-DB74C659C942}.Debug|x64.Build.0 = Debug|x64
+		{9CD8D293-016D-4E7C-841C-DB74C659C942}.Debug|x86.ActiveCfg = Debug|Win32
+		{9CD8D293-016D-4E7C-841C-DB74C659C942}.Debug|x86.Build.0 = Debug|Win32
+		{9CD8D293-016D-4E7C-841C-DB74C659C942}.Release|x64.ActiveCfg = Release|x64
+		{9CD8D293-016D-4E7C-841C-DB74C659C942}.Release|x64.Build.0 = Release|x64
+		{9CD8D293-016D-4E7C-841C-DB74C659C942}.Release|x86.ActiveCfg = Release|Win32
+		{9CD8D293-016D-4E7C-841C-DB74C659C942}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
