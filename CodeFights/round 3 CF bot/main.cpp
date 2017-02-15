@@ -1,12 +1,14 @@
+#include "..\eval_t.h"
 #include <iostream>
 #include <vector>
 #include <string>
 #include <algorithm>
 #include <map>
-//#include "..\"
 
 #define _STD ::std::
 #define _STR _STD string 
+
+using namespace eval_test;
 
 typedef _STR _str;
 typedef _STD vector<_str> v_str;
@@ -103,7 +105,7 @@ void main()
 				"    return (a + b) % 2 == 0" };
 	code2 = {	"def is_even_sum(summand_1, summand_2):",
 				"    return (summand_1 + summand_2) % 2 == 0" };
-	//plagiarismCheck(code1, code2);
+	EvalTest( plagiarismCheck(code1, code2), true );
 
 	// Test 2
 	code1 = {	"function is_even_sum(a, b) {",
@@ -112,9 +114,9 @@ void main()
 	code2 = {	"function is_even_sum(a, b) {",
 				"  return (a + b) % 2 !== 1;",
 				"}" };
-	plagiarismCheck(code1, code2);
+	EvalTest( plagiarismCheck(code1, code2), false );
 
-	// Test 
+	// Test 7
 	code1 = { "if (2 * 2 == 5 &&",
 			"true):",
 			"  print 'Tricky test ;)'" };
@@ -122,6 +124,5 @@ void main()
 			"&& true):",
 			"  print 'Tricky test ;)'" };
 
-	plagiarismCheck(code1, code2);
-
+	EvalTest (plagiarismCheck(code1, code2), true );
 }
