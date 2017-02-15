@@ -12,7 +12,7 @@ _E_TEST_BEGIN
 template <typename T>
 static void EvalTest(T a, T b)
 {
-	std::cout << a == b ? "pass" : "fail" << "\n";
+	std::cout << (a == b ? "pass" : "fail") << "\n";
 }
 
 /* Specializations  */
