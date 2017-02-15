@@ -5,19 +5,21 @@
 #define _E_TEST_BEGIN  namespace eval_test {
 #define _E_TEST_END  }
 
+#include <iostream>
+
 _E_TEST_BEGIN
 // Generic specialization
 template <typename T>
-static const char* EvalTest(T a, T b)
+static void EvalTest(T a, T b)
 {
-	return a == b ? "pass" : "fail";
+	std::cout << a == b ? "pass" : "fail" << "\n";
 }
 
 /* Specializations  */
 template <>
-static const char* EvalTest(const char * a, const char * b)
+static void EvalTest(const char * a, const char * b)
 {
-	return a == b ? "pass" : "fail";
+	std::cout << (a == b ? "pass" : "fail") << "\n";
 }
 
 _E_TEST_END
