@@ -13,6 +13,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Challenges", "Challenges", 
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Common Character Count", "Common Character Count\Common Character Count.vcxproj", "{008AE489-50EF-42CA-AC60-D186DC32B0D2}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Is Lucky", "Is Lucky\Is Lucky.vcxproj", "{33467C25-E6DC-4056-A020-AFD0E311EAB1}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "utils", "utils", "{760C9FB2-2816-417F-BD12-41AA70EEC346}"
+	ProjectSection(SolutionItems) = preProject
+		eval_t.h = eval_t.h
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -45,6 +52,14 @@ Global
 		{008AE489-50EF-42CA-AC60-D186DC32B0D2}.Release|x64.Build.0 = Release|x64
 		{008AE489-50EF-42CA-AC60-D186DC32B0D2}.Release|x86.ActiveCfg = Release|Win32
 		{008AE489-50EF-42CA-AC60-D186DC32B0D2}.Release|x86.Build.0 = Release|Win32
+		{33467C25-E6DC-4056-A020-AFD0E311EAB1}.Debug|x64.ActiveCfg = Debug|x64
+		{33467C25-E6DC-4056-A020-AFD0E311EAB1}.Debug|x64.Build.0 = Debug|x64
+		{33467C25-E6DC-4056-A020-AFD0E311EAB1}.Debug|x86.ActiveCfg = Debug|Win32
+		{33467C25-E6DC-4056-A020-AFD0E311EAB1}.Debug|x86.Build.0 = Debug|Win32
+		{33467C25-E6DC-4056-A020-AFD0E311EAB1}.Release|x64.ActiveCfg = Release|x64
+		{33467C25-E6DC-4056-A020-AFD0E311EAB1}.Release|x64.Build.0 = Release|x64
+		{33467C25-E6DC-4056-A020-AFD0E311EAB1}.Release|x86.ActiveCfg = Release|Win32
+		{33467C25-E6DC-4056-A020-AFD0E311EAB1}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -53,5 +68,6 @@ Global
 		{3824BD50-D214-4B9F-909D-4B978F1E54A7} = {733C2F7B-8A85-4B8C-A0AD-A6239E4F3AA3}
 		{72E42896-840F-4085-BE69-AB106CBA6CE6} = {733C2F7B-8A85-4B8C-A0AD-A6239E4F3AA3}
 		{008AE489-50EF-42CA-AC60-D186DC32B0D2} = {3CB7C81C-F0E5-4ECC-B4EC-26A5AC16A91A}
+		{33467C25-E6DC-4056-A020-AFD0E311EAB1} = {3CB7C81C-F0E5-4ECC-B4EC-26A5AC16A91A}
 	EndGlobalSection
 EndGlobal
