@@ -36,6 +36,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Sort By Height", "Sort By H
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Reverse Parentheses", "Reverse Parentheses\Reverse Parentheses.vcxproj", "{9F87556A-AA3F-4FFD-A30B-45450916CB3A}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Are Similar", "Are Similar\Are Similar.vcxproj", "{55B6E8DF-4887-4E8B-869C-3932548763A4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -116,6 +118,14 @@ Global
 		{9F87556A-AA3F-4FFD-A30B-45450916CB3A}.Release|x64.Build.0 = Release|x64
 		{9F87556A-AA3F-4FFD-A30B-45450916CB3A}.Release|x86.ActiveCfg = Release|Win32
 		{9F87556A-AA3F-4FFD-A30B-45450916CB3A}.Release|x86.Build.0 = Release|Win32
+		{55B6E8DF-4887-4E8B-869C-3932548763A4}.Debug|x64.ActiveCfg = Debug|x64
+		{55B6E8DF-4887-4E8B-869C-3932548763A4}.Debug|x64.Build.0 = Debug|x64
+		{55B6E8DF-4887-4E8B-869C-3932548763A4}.Debug|x86.ActiveCfg = Debug|Win32
+		{55B6E8DF-4887-4E8B-869C-3932548763A4}.Debug|x86.Build.0 = Debug|Win32
+		{55B6E8DF-4887-4E8B-869C-3932548763A4}.Release|x64.ActiveCfg = Release|x64
+		{55B6E8DF-4887-4E8B-869C-3932548763A4}.Release|x64.Build.0 = Release|x64
+		{55B6E8DF-4887-4E8B-869C-3932548763A4}.Release|x86.ActiveCfg = Release|Win32
+		{55B6E8DF-4887-4E8B-869C-3932548763A4}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -131,5 +141,6 @@ Global
 		{BE399BA9-4DB2-4BEE-A35C-9947D27818EB} = {8CCCB76D-5D2D-4F7F-ACF3-EB2CE603F632}
 		{82F1C28F-CAD6-4471-9A84-7060128D2D2F} = {3CB7C81C-F0E5-4ECC-B4EC-26A5AC16A91A}
 		{9F87556A-AA3F-4FFD-A30B-45450916CB3A} = {3CB7C81C-F0E5-4ECC-B4EC-26A5AC16A91A}
+		{55B6E8DF-4887-4E8B-869C-3932548763A4} = {3CB7C81C-F0E5-4ECC-B4EC-26A5AC16A91A}
 	EndGlobalSection
 EndGlobal
