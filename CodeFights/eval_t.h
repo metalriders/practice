@@ -12,14 +12,21 @@ _E_TEST_BEGIN
 template <typename T>
 static void EvalTest(T a, T b)
 {
-	std::cout << (a == b ? "pass" : "fail") << "\n";
+	std::cout << (a == b ? "pass" : "fail") << "\n\n";
+}
+
+template <typename T>
+static void EvalTest(char * test_name, T a, T b)
+{
+	puts(test_name);
+	std::cout << (a == b ? "pass" : "fail") << "\n\n";
 }
 
 /* Specializations  */
 template <>
 static void EvalTest(const char * a, const char * b)
 {
-	std::cout << (a == b ? "pass" : "fail") << "\n";
+	std::cout << (a == b ? "pass" : "fail") << "\n\n";
 }
 
 _E_TEST_END
