@@ -40,6 +40,14 @@ true if A and B are similar, false otherwise.
 
 typedef std::vector<int> v_int;
 
+int safeFind(v_int &a, v_int &b, int ofs, int val)
+{
+	for (int i = ofs; i < a.size(); i++) {
+		if (a[i] == val && b[i] != val) return i;
+	}
+	return -1;
+};
+
 bool areSimilar(v_int a, v_int b) {
 	int diff_nums = 0;
 
@@ -48,9 +56,9 @@ bool areSimilar(v_int a, v_int b) {
 		if (a[i] != b[i])
 		{
 			diff_nums++;
-			auto s_val = std::find(b.begin() + i, b.end(), a[i]);
-			if (s_val == b.end()) return false;
-			std::iter_swap(i + b.begin(), s_val);
+			int s_val = safeFind(a, b, i, b[i]);
+			if (s_val == -1) return false;
+			std::iter_swap(i + a.begin(), s_val + a.begin());
 		}
 	}
 	return diff_nums < 2;
