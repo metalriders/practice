@@ -44,6 +44,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Rotate Matrix", "Rotate Mat
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "First Not Repeating Character", "First Not Repeating Character\First Not Repeating Character.vcxproj", "{F948357D-1327-486A-888B-DD680A686C0F}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Sudoku 2", "Sudoku 2\Sudoku 2.vcxproj", "{00F07810-68A6-4510-9068-7FB5F850B204}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -156,6 +158,14 @@ Global
 		{F948357D-1327-486A-888B-DD680A686C0F}.Release|x64.Build.0 = Release|x64
 		{F948357D-1327-486A-888B-DD680A686C0F}.Release|x86.ActiveCfg = Release|Win32
 		{F948357D-1327-486A-888B-DD680A686C0F}.Release|x86.Build.0 = Release|Win32
+		{00F07810-68A6-4510-9068-7FB5F850B204}.Debug|x64.ActiveCfg = Debug|x64
+		{00F07810-68A6-4510-9068-7FB5F850B204}.Debug|x64.Build.0 = Debug|x64
+		{00F07810-68A6-4510-9068-7FB5F850B204}.Debug|x86.ActiveCfg = Debug|Win32
+		{00F07810-68A6-4510-9068-7FB5F850B204}.Debug|x86.Build.0 = Debug|Win32
+		{00F07810-68A6-4510-9068-7FB5F850B204}.Release|x64.ActiveCfg = Release|x64
+		{00F07810-68A6-4510-9068-7FB5F850B204}.Release|x64.Build.0 = Release|x64
+		{00F07810-68A6-4510-9068-7FB5F850B204}.Release|x86.ActiveCfg = Release|Win32
+		{00F07810-68A6-4510-9068-7FB5F850B204}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -175,5 +185,6 @@ Global
 		{91FBB407-44A4-45A1-BFF9-48B0C45AC884} = {3CB7C81C-F0E5-4ECC-B4EC-26A5AC16A91A}
 		{723BF540-0E8A-464F-AB8C-0883CDB0FE61} = {8CCCB76D-5D2D-4F7F-ACF3-EB2CE603F632}
 		{F948357D-1327-486A-888B-DD680A686C0F} = {8CCCB76D-5D2D-4F7F-ACF3-EB2CE603F632}
+		{00F07810-68A6-4510-9068-7FB5F850B204} = {8CCCB76D-5D2D-4F7F-ACF3-EB2CE603F632}
 	EndGlobalSection
 EndGlobal
